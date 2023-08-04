@@ -10,7 +10,8 @@ tanzu apps workload create app-golang-kaniko-with-subpath \
   --label apps.tanzu.vmware.com/has-tests=true \
   --label app.kubernetes.io/part-of=app-golang-kaniko-with-subpath \
   --param-yaml testing_pipeline_matching_labels='{"apps.tanzu.vmware.com/pipeline":"golang-pipeline"}' \
-  --param dockerfile='./Dockerfile' \
+  --param dockerfile='./my-subdir/Dockerfile' \
+  --sub-path my-subdir \
   --type web \
   --yes
 ```
